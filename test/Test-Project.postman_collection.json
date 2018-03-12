@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": ""
+					"raw": "http://jsonplaceholder.typicode.com/posts?userId=1"
 				},
 				"description": "get"
 			},
