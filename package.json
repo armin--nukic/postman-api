@@ -6,7 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "api-test": "newman test/Test Project.postman_collection.json"
+    "api-test": "newman run test/Test-Project.postman_collection.json"
   },
   "author": "Armin Nukic",
   "dependencies": {
