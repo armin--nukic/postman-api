@@ -1,0 +1,64 @@
+{
+	"info": {
+		"name": "Test-Project",
+		"_postman_id": "13bb3398-e807-afdd-a252-3d6330870d58",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "get"
+			},
+			"response": []
+		},
+		{
+			"name": "http://jsonplaceholder.typicode.com/posts/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f483025e-9320-4865-bb80-49c7c5dc71a2",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/posts/1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
